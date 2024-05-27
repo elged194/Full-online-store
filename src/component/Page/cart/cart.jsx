@@ -1,0 +1,83 @@
+import "./cart.css";
+import Header from "../../Header/Header";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  decrement,
+  deledeItem,
+  increment,
+  searchProductCart,
+} from "../../../Redux/counterSlice";
+import { useEffect } from "react";
+
+export default function Cart() {
+
+  const { myCart, searchTerm, filteredProducts } = useSelector(
+    (state) => state.UserStor
+  );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (searchTerm) {
+      dispatch(searchProductCart(searchTerm));
+    }
+  }, [searchTerm, dispatch]);
+  
+
+  let subTotal = 0;
+  const salesTax = 50;
+
+  const productsToDisplay = searchTerm ? filteredProducts : myCart;
+
+  return (
+    <>
+      <Header />
+      <div className="myCart">
+        {productsToDisplay.map((e) => {
+          subTotal += e.price * e.quantity;
+          return (
+            <div className="item-cart" key={e.id}>
+              <img src={e.imgList[0]} alt="" />
+              <div className="item-cart-info">
+                <div className="">
+                  <h3> {e.name}</h3>
+                  <p>{e.discripton} </p>
+                </div>
+
+                <div className="counter">
+                  <button onClick={() => dispatch(increment(e))}>+</button>
+                  <h6>{e.quantity} </h6>
+                  <button onClick={() => dispatch(decrement(e))}>-</button>
+                </div>
+
+                <h6>${e.price * e.quantity}</h6>
+
+                {/* Remover Item */}
+                <i
+                  className="bx bx-trash"
+                  onClick={() => dispatch(deledeItem(e))}
+                ></i>
+              </div>
+            </div>
+          );
+        })}
+
+        <div className="total-cart">
+          <div className="">
+            Subtotal: <span>$ {subTotal} </span>{" "}
+          </div>
+          <hr />
+          <div className="">
+            Sales Tax: <span>$ {salesTax} </span>{" "}
+          </div>
+          <hr />
+          <div className="">
+            Grand Total: <span>$ {subTotal + salesTax} </span>
+          </div>
+          <hr />
+          <button>Check Out</button>
+        </div>
+      </div>
+    </>
+  );
+}

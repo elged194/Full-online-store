@@ -1,0 +1,81 @@
+*{
+    margin: 0;padding: 0;
+}
+.myCart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.myCart .item-cart{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CDDC39;
+    margin: 10px 0;
+}
+.item-cart img{
+    width: 100px;
+    height: 100px;
+}
+.item-cart .item-cart-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+}
+.counter{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.counter button{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+.counter h6{
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 3px;
+    font-weight: bold;
+}
+.item-cart .bx-trash{
+    font-size: 25px;
+    cursor: pointer;
+}
+.item-cart .bx-trash:hover{
+    color: #bb2a11;
+}
+.total-cart{
+    width: 30%;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.total-cart button{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: #cddc39;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+.total-cart button:hover{
+    background-color: #333;
+    color: #fff;
+}
+.total-cart > div{
+    display: flex;
+    justify-content: space-between;
+}
+.total-cart span{
+    font-weight: 400;
+    color: #555;
+    font-size: 17px;
+}

@@ -1,0 +1,142 @@
+:root {
+    --open-sans: 'Open Sans', sans-serif;
+    --oswald: 'Oswald', sans-serif;
+
+    --blue: #0097FC;
+    --light-blue: #7AC1FE;
+    --dark-blue: #008CEA;
+    --grey: #828282;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+.heder nav{
+    height: 60px;
+    position: relative;
+    position: fixed;
+    top: 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    transform: translateY(0%);
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667ms;
+    z-index: 5;
+    background-color: #fff;
+}
+
+.cart {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+.cart h4{
+    color: #333;
+}
+.cart .bx-cart-alt{
+    font-size: 30px;
+    color: #8eb339;
+    margin-right: 9px;
+}
+.cart span{
+    background-color: #8eb339;
+    border-radius: 50px;
+    color: #fff;
+    padding: 0px 7px;
+    position: absolute;
+    top: -6px;
+    right: 14px;
+}
+
+.search {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    width: 92%;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.search input:focus-visible{
+    outline: none;
+}
+
+.search label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 3px 3px  10px;
+    border-radius: 50px;
+    border: solid 1px #333;
+}
+
+[type=search] {
+    outline-offset: 0;
+}
+.search .bx-search-alt-2{
+    font-size: 20px;
+    color: #fff;
+    background-color: #8eb339;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+nav .bx-menu {
+    cursor: pointer;
+    position: relative;
+    z-index: 200;
+    transition: all .3s ease;
+    font-size: 33px;
+    display: none;
+}
+
+
+
+nav .brand , .brand span{
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--oswald);
+    color: #000;
+    text-transform: uppercase;
+    /* z-index: 200; */
+}
+nav .brand span{
+    color: #8eb339;
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+/* ---------------------------------- */
+
+@media screen and (max-width: 576px) {
+
+    nav .bx-menu {
+        display: block;
+        transition-delay: .3s;
+    }
+
+    nav .bx-menu .hide {
+        opacity: 0;
+        pointer-events: none;
+        transition-delay: 0s;
+    }
+}

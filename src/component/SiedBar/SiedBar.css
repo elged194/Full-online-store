@@ -1,0 +1,80 @@
+.siedBar {
+    width: 296px;
+    background-color: #e7e7e7;
+    height: 90vh;
+    padding: 5px 10px;
+    position: fixed;
+    top: 70px;
+    left: 5px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.siedBar .arro{
+    position: absolute;
+    top: 0px;
+    right: -42px;
+    background-color: #8BC34A;
+    padding: 3px 7px;
+    cursor: pointer;
+}
+.siedBar .arro .bx{
+        font-size: 29px;
+        color: #fff;
+}
+.siedBar ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+
+.siedBar ul li{
+    width: 100%;
+    padding: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.siedBar ul li label{
+    cursor: pointer;
+}
+.siedBar li input{
+    margin-right: 7px;
+}
+
+
+
+.single-widget {
+    width: 100%;
+}
+.single-widget .label-input{
+    text-align: justify;
+    padding: 5px;
+    background-color: #8BC34A;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.siedBar .titlee {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    display: block;
+    border-bottom: 1px solid #8fb339;
+    padding: 15px 0;
+}
+.filter-brand form{
+    max-height: 150px;
+    overflow: auto;
+}
+.filter-brand label{
+    margin-bottom: .5rem;
+    width: 100%;
+}

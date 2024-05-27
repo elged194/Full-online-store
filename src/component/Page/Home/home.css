@@ -1,0 +1,166 @@
+img {
+    width: 100%;
+    height: 295px;
+    opacity: 0.8;
+}
+
+.img {
+    width: 96%;
+    background-color: #8eb339;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: -50px;
+
+}
+
+.home {
+    
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.home .home-container{
+    width: calc(100% - 300px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    float: right;
+    margin-top: 40px;
+}
+
+/* card item */
+.card-item {
+    width: 250px;
+    color: #333;
+    position: relative;
+    margin: 15px;
+}
+
+.body-card {
+    padding: 10px;
+    border: solid 1px #8eb339;
+    border-radius: 15px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.price {
+    color: #8fb339;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price p {
+    text-decoration: line-through;
+}
+
+.name-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.name-item .bx {
+    color: goldenrod;
+}
+
+
+/* add cart */
+
+.add-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-cart button {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #8fb339;
+    padding: 5px 17px;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: all .3s ease-in-out;
+
+}
+
+.add-cart button:hover {
+    background-color: #333;
+}
+
+.add-cart .bx-cart-alt {
+    font-size: 20px;
+}
+
+.add-cart .bx-share-alt,
+.add-cart .bxs-heart {
+    font-size: 20px;
+    padding: 5px;
+    border: solid 1px #b9b9b9;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.add-cart .bx-share-alt:hover,
+.add-cart .bxs-heart:hover {
+    color: #8eb339;
+}
+
+/* -----  Snack Bar ------*/
+#snackbar {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    background-color: #8BC34A;
+    min-width: 250px;
+    margin-left: -125px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50px;
+    font-size: 17px;
+    z-index: 10;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  #snackbar .bx-check-circle{
+    font-size: 25px;
+  }
+
+  @-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 50px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 50px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {top: 50px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {top: 50px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
