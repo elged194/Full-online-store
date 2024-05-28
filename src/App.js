@@ -4,6 +4,7 @@ import Home from "./component/Page/Home/home";
 // React Router v6
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProdectDetalis from "./component/Page/Prodect Detalis/ProdectDetalis";
+import Payment from "./component/Page/payment/payment";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,12 @@ const router = createBrowserRouter([
     path: "/cart",
     element: <Cart />,
   },
+
+  {
+    path: "/cart/payment",
+    element: <Payment />,
+  },
+
   {
     path: "prodect-detalis/:prodectId",
     element: <ProdectDetalis />,

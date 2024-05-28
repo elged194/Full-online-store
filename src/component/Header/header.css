@@ -46,11 +46,11 @@ li {
 }
 .cart .bx-cart-alt{
     font-size: 30px;
-    color: #8eb339;
+    color: #8BC34A;
     margin-right: 9px;
 }
 .cart span{
-    background-color: #8eb339;
+    background-color: #8BC34A;
     border-radius: 50px;
     color: #fff;
     padding: 0px 7px;
@@ -93,8 +93,8 @@ li {
 .search .bx-search-alt-2{
     font-size: 20px;
     color: #fff;
-    background-color: #8eb339;
-    padding: 5px;
+    background-color: #8BC34A;
+    padding: 6px 7px;
     border-radius: 50px;
 }
 
@@ -119,7 +119,7 @@ nav .brand , .brand span{
     /* z-index: 200; */
 }
 nav .brand span{
-    color: #8eb339;
+    color: #8BC34A;
     font-size: 30px;
     font-weight: 800;
 

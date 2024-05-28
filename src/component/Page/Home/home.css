@@ -6,7 +6,7 @@ img {
 
 .img {
     width: 96%;
-    background-color: #8eb339;
+    background-color: #8BC34A;
     border-radius: 15px;
     margin: auto;
     margin-bottom: -50px;
@@ -38,7 +38,7 @@ img {
 
 .body-card {
     padding: 10px;
-    border: solid 1px #8eb339;
+    border: solid 1px #8BC34A;
     border-radius: 15px;
     margin-top: 15px;
     position: relative;
@@ -47,7 +47,7 @@ img {
 }
 
 .price {
-    color: #8fb339;
+    color: #8BC34A;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -82,7 +82,7 @@ img {
     font-size: 15px;
     font-weight: 600;
     color: #fff;
-    background-color: #8fb339;
+    background-color: #8BC34A;
     padding: 5px 17px;
     border: none;
     display: flex;
@@ -112,7 +112,7 @@ img {
 
 .add-cart .bx-share-alt:hover,
 .add-cart .bxs-heart:hover {
-    color: #8eb339;
+    color: #8BC34A;
 }
 
 /* -----  Snack Bar ------*/

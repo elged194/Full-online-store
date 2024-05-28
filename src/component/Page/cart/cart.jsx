@@ -2,30 +2,32 @@ import "./cart.css";
 import Header from "../../Header/Header";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  calculateTotals,
   decrement,
   deledeItem,
   increment,
   searchProductCart,
 } from "../../../Redux/counterSlice";
 import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 export default function Cart() {
-
-  const { myCart, searchTerm, filteredProducts } = useSelector(
-    (state) => state.UserStor
-  );
-
+  const { myCart, searchTerm, filteredProducts, totale, salesTax } =
+    useSelector((state) => state.UserStor);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  let subTotal = 0;
 
   useEffect(() => {
     if (searchTerm) {
       dispatch(searchProductCart(searchTerm));
     }
   }, [searchTerm, dispatch]);
-  
 
-  let subTotal = 0;
-  const salesTax = 50;
+  useEffect(() => {
+    dispatch(calculateTotals(subTotal));
+  }, [myCart, dispatch, subTotal]);
 
   const productsToDisplay = searchTerm ? filteredProducts : myCart;
 
@@ -72,10 +74,10 @@ export default function Cart() {
           </div>
           <hr />
           <div className="">
-            Grand Total: <span>$ {subTotal + salesTax} </span>
+            Grand Total: <span>$ {totale.toFixed(2)} </span>
           </div>
           <hr />
-          <button>Check Out</button>
+          <button onClick={() => navigate(`/cart/payment`)}>Check Out</button>
         </div>
       </div>
     </>

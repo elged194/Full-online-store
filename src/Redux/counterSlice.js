@@ -3,8 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   myCart: [],
   allProducts: [],
+
   filteredProducts: [],
   searchTerm: "",
+
+  salesTax: 50,
+  Discount: 0,
+  totale: 0,
+  totalePayment: 0,
+  additionalFee: 10 ,
 };
 
 export const counterSlice = createSlice({
@@ -60,6 +67,7 @@ export const counterSlice = createSlice({
       state.allProducts = action.payload;
       state.filteredProducts = action.payload;
     },
+
     filterByPrice: (state, action) => {
       const { min, max } = action.payload;
       state.filteredProducts = state.allProducts.filter(
@@ -67,6 +75,12 @@ export const counterSlice = createSlice({
       );
     },
 
+    calculateTotals: (state, action) => {
+      state.totale = state.salesTax + action.payload;
+      state.Discount = state.totale * (10 / 100);
+      state.totalePayment = state.totale - state.Discount 
+      state.totalePayment += state.additionalFee
+    },
   },
 });
 
@@ -79,6 +93,7 @@ export const {
   searchProductCart,
   setProducts,
   filterByPrice,
+  calculateTotals,
 } = counterSlice.actions;
 
 export default counterSlice.reducer;
