@@ -14,6 +14,7 @@ import { useNavigate } from "react-router";
 export default function Cart() {
   const { myCart, searchTerm, filteredProducts, totale, salesTax } =
     useSelector((state) => state.UserStor);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -77,7 +78,7 @@ export default function Cart() {
             Grand Total: <span>$ {totale.toFixed(2)} </span>
           </div>
           <hr />
-          <button onClick={() => navigate(`/cart/payment`)}>Check Out</button>
+          <button onClick={() => navigate(`/payment`)}>Check Out</button>
         </div>
       </div>
     </>

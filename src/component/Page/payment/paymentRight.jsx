@@ -1,11 +1,35 @@
+import { useNavigate } from "react-router";
 import "./payment.css";
+import { useState } from "react";
 
 export default function PaymentRight() {
+  const navigate = useNavigate();
+
+  const [show, setshow] = useState(""); //  Show SnackBar => Payment
+
+  const handelSubmit = (e) => {
+    e.preventDefault();
+
+    setshow("show"); // Show SnackBar
+
+    setTimeout(() => {
+      navigate("/");
+
+      setshow(""); // Hidden SnackBar
+
+      window.location.reload(); // reload page
+    }, 3000);
+  };
 
   return (
     <>
       <div className="payment-right">
-        <form action="" className="payment-form">
+        <div id="snackbar" className={show}>
+          The purchase was made successfully..{" "}
+          <i class="bx bx-check-circle"></i>
+        </div>
+
+        <form action="" className="payment-form" onSubmit={handelSubmit}>
           <h1 className="payment-title">Payment Details</h1>
           <div className="payment-method">
             <input
@@ -13,6 +37,7 @@ export default function PaymentRight() {
               name="payment-method"
               id="method-1"
               defaultChecked=""
+              required
             />
             <label htmlFor="method-1" className="payment-method-item">
               <img
@@ -20,21 +45,21 @@ export default function PaymentRight() {
                 alt=""
               />
             </label>
-            <input type="radio" name="payment-method" id="method-2" />
+            <input type="radio" name="payment-method" id="method-2" required />
             <label htmlFor="method-2" className="payment-method-item">
               <img
                 src="https://res.cloudinary.com/dyxoy6dpx/image/upload/v1716905563/E-Commerce/payment/mastercard_mnxxww.png"
                 alt=""
               />
             </label>
-            <input type="radio" name="payment-method" id="method-3" />
+            <input type="radio" name="payment-method" id="method-3" required />
             <label htmlFor="method-3" className="payment-method-item">
               <img
                 src="https://res.cloudinary.com/dyxoy6dpx/image/upload/v1716905563/E-Commerce/payment/paypal_epcuza.png"
                 alt=""
               />
             </label>
-            <input type="radio" name="payment-method" id="method-4" />
+            <input type="radio" name="payment-method" id="method-4" required />
             <label htmlFor="method-4" className="payment-method-item">
               <img
                 src="https://res.cloudinary.com/dyxoy6dpx/image/upload/v1716905563/E-Commerce/payment/stripe_bnvkom.png"
@@ -103,7 +128,7 @@ export default function PaymentRight() {
               </label>
             </div>
           </div>
-          
+
           <button type="submit" className="payment-form-submit-button">
             <i className="ri-wallet-line" /> Pay
           </button>

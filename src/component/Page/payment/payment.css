@@ -7,16 +7,19 @@
     box-sizing: border-box;
     font: inherit;
 }
+
 body {
     font-family: 'Inter', sans-serif;
     color: var(--gray-900);
     background-color: var(--gray-50);
 }
+
 .container {
     max-width: 940px;
     margin: 0 auto;
     padding: 0 16px;
 }
+
 /* end: Globals */
 
 
@@ -25,17 +28,20 @@ body {
 .payment-section {
     padding: 48px 0;
 }
+
 .payment-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
+
 .payment-header {
     padding: 24px;
     background-color: #4CAF50;
     border-radius: 12px;
     padding-bottom: 72px;
 }
+
 .payment-header-icon {
     width: 48px;
     height: 48px;
@@ -48,6 +54,7 @@ body {
     justify-content: center;
     margin-bottom: 12px;
 }
+
 .payment-header-title {
     font-size: 20px;
     font-weight: 600;
@@ -55,16 +62,19 @@ body {
     line-height: 1.4;
     margin-bottom: 4px;
 }
+
 .payment-header-description {
     font-size: 15px;
     color: var(--gray-200);
     line-height: 1.5;
 }
+
 .payment-content {
     padding: 24px;
     margin-top: -64px;
     position: relative;
 }
+
 .payment-content::before {
     content: '';
     position: absolute;
@@ -76,6 +86,7 @@ body {
     border-radius: 4px;
     background-color: #8BC34A;
 }
+
 .payment-body {
     background-color: var(--white);
     border-radius: 0 0 8px 8px;
@@ -84,11 +95,13 @@ body {
     padding-top: 8px;
     overflow: hidden;
 }
+
 .payment-plan {
     display: flex;
     align-items: center;
     padding: 12px;
 }
+
 .payment-plan-type {
     width: 40px;
     height: 40px;
@@ -103,11 +116,13 @@ body {
     border-radius: 4px;
     margin-right: 8px;
 }
+
 .payment-plan-info {
     width: 100%;
     margin-right: 8px;
     display: grid;
 }
+
 .payment-plan-info-name {
     font-size: 13px;
     color: var(--gray-400);
@@ -116,35 +131,42 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .payment-plan-info-price {
     font-weight: 600;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .payment-plan-change {
     color: #4CAF50;
     font-size: 12px;
     font-weight: 600;
     text-underline-offset: 2px;
 }
+
 .payment-plan-change:hover {
     color: var(--blue-600);
 }
+
 .payment-summary-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 6px 12px;
 }
+
 .payment-summary-name {
     font-size: 14px;
     color: var(--gray-500);
 }
+
 .payment-summary-price {
     font-weight: 500;
     font-size: 15px;
 }
+
 .payment-summary-divider {
     width: calc(100% - 16px);
     height: 0;
@@ -152,6 +174,7 @@ body {
     border-bottom: 1px dashed var(--gray-200);
     position: relative;
 }
+
 .payment-summary-divider::before {
     content: '';
     position: absolute;
@@ -164,6 +187,7 @@ body {
     background-color: var(--gray-50);
     box-shadow: inset 0 2px 16px rgba(0, 0, 0, .05);
 }
+
 .payment-summary-divider::after {
     content: '';
     position: absolute;
@@ -176,32 +200,39 @@ body {
     background-color: var(--gray-50);
     box-shadow: inset 0 2px 16px rgba(0, 0, 0, .05);
 }
+
 .payment-summary-total {
     padding-bottom: 16px;
 }
+
 .payment-summary-total .payment-summary-name {
     color: var(--gray-900);
 }
+
 .payment-summary-total .payment-summary-price {
     font-size: 16px;
     color: #4CAF50;
     font-weight: 600;
 }
+
 .payment-right {
     min-width: 0;
 }
+
 .payment-form {
     padding: 24px;
     background-color: var(--white);
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, .05);
 }
+
 .payment-title {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 12px;
     line-height: 1.3;
 }
+
 .payment-method {
     display: flex;
     align-items: center;
@@ -210,9 +241,11 @@ body {
     margin-bottom: 12px;
     width: 100%;
 }
+
 .payment-method input {
     display: none;
 }
+
 .payment-method-item {
     width: 80px;
     height: 80px;
@@ -224,10 +257,12 @@ body {
     position: relative;
     flex-shrink: 0;
 }
-input:checked + .payment-method-item {
+
+input:checked+.payment-method-item {
     border-color: #4CAF50;
 }
-input:checked + .payment-method-item::before {
+
+input:checked+.payment-method-item::before {
     content: '';
     position: absolute;
     top: -6px;
@@ -241,15 +276,18 @@ input:checked + .payment-method-item::before {
     background-position: center;
     background-repeat: no-repeat;
 }
-.payment-method-item > img {
+
+.payment-method-item>img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 .payment-form-group {
     position: relative;
     margin-bottom: 16px;
 }
+
 .payment-form-control {
     outline: transparent;
     border: 1px solid var(--gray-200);
@@ -258,6 +296,7 @@ input:checked + .payment-method-item::before {
     width: 100%;
     transition: all .15s ease-in-out;
 }
+
 .payment-form-label {
     position: absolute;
     top: 50%;
@@ -267,29 +306,36 @@ input:checked + .payment-method-item::before {
     pointer-events: none;
     transition: all .1s ease-in-out;
 }
+
 .payment-form-control:focus {
     outline: 1px solid #4CAF50;
     border-color: #4CAF50;
 }
-.payment-form-control:focus + .payment-form-label,
-.payment-form-control:not(:placeholder-shown) + .payment-form-label {
+
+.payment-form-control:focus+.payment-form-label,
+.payment-form-control:not(:placeholder-shown)+.payment-form-label {
     top: 30%;
     font-size: 12px;
 }
+
 .payment-form-label-required::after {
     content: ' *';
     color: var(--red-500);
 }
+
 .payment-form-group-flex {
     display: flex;
     align-items: center;
 }
-.payment-form-group-flex > * {
+
+.payment-form-group-flex>* {
     width: 100%;
 }
-.payment-form-group-flex > :not(:last-child) {
+
+.payment-form-group-flex> :not(:last-child) {
     margin-right: 12px;
 }
+
 .payment-form-submit-button {
     background-color: #4CAF50;
     border-radius: 8px;
@@ -305,12 +351,15 @@ input:checked + .payment-method-item::before {
     padding: 16px;
     transition: all .15s ease-in-out;
 }
+
 .payment-form-submit-button:hover {
     background-color: #6cbd70;
 }
-.payment-form-submit-button > i {
+
+.payment-form-submit-button>i {
     margin-right: 8px;
 }
+
 /* end: Payment */
 
 
@@ -320,15 +369,26 @@ input:checked + .payment-method-item::before {
     .payment-wrapper {
         grid-template-columns: 1fr;
     }
+
     .payment-content {
         padding: 16px;
     }
+
     .payment-content::before {
         top: 16px;
         width: calc(100% - 20px);
     }
+
     .payment-form-group-flex {
         display: block;
     }
 }
+
 /* end: Breakpoints */
+
+
+/* show snackbar  */
+.payment-right #snackbar {
+    background-color: #4CAF50;
+    left: 63%;
+}
